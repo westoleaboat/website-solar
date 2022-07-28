@@ -8,34 +8,38 @@
   <title>Document</title>
   <script src="script.js" defer></script>
 
-  <link rel="stylesheet" href="/dist/css/module.css">
+  <link rel="stylesheet" href="./dist/css/module.css">
 </head>
 
 <body>
 
   <section class="header">
 
-    <div class=" top-bar">
+    <!-- header bg image -->
+    <img class="header__bg-img" src="/dist/css/assets/pexels-kelly-8457868.jpg" alt="bg image">
 
-      <div class="logo">
+    <!-- top bar with logo and phone number -->
+    <div class="header__top-bar">
+
+      <div class="top-bar__logo">
         <h4>COMPANY LOGO</h4>
       </div>
-      <div class="phone-number">
+      <div class="top-bar__phone-number">
         <h4>011111 1112 00</h4>
       </div>
 
     </div>
 
-    <img class="bg-img" src="/dist/css/assets/pexels-kelly-8457868.jpg" alt="bg image">
+    <!-- header text -->
+    <div class="header__quote">
 
-    <div class="header-quote">
-
-      <div class="q-text">
+      <div class="header__text">
         <h1>Find out how much you can save with a FV system on your roof</h1>
       </div>
-      <div class="search-bar">
-        <input class="input" type="text" placeholder="input your address">
-        <button class="btn">Simulate</button>
+
+      <div class="header__search-bar">
+        <input class="header__input" type="text" placeholder="input your address">
+        <button class="header__btn">Simulate</button>
       </div>
 
     </div>
@@ -43,20 +47,23 @@
   </section>
 
   <section class="contact">
-    <div class="contact-text">
+
+    <div class="contact__text">
 
       <h1>Or leave your contact and we will call you</h1>
-      <h3 class="subtitle">Select the best option and we will call you</h3>
+      <h3 class="contact__subtitle">Select the best option and we will call you</h3>
 
 
+      <!-- hidden business input holder -->
       <div class="show-card">
 
-        <div class="btn-switch">
-          <button class="btn btn1 expand-button1" autofocus>Singular</button>
-          <button class="btn btn2 expand-button">Business</button>
+        <div class="contact__btn-switch">
+          <button class="contact__btn1 expand-button1" autofocus>Singular</button>
+          <button class="contact__btn1 expand-button">Business</button>
         </div>
 
-        <div class="business">
+        <!-- business input -->
+        <div class="contact__business">
 
           <label for="Business">Business</label>
           <input name="Business" id="Business" placeholder="Business"></input>
@@ -118,17 +125,20 @@
         <button class="btn btn-square" type="submit">Send</button>
       </div>
 
-      <div class="disclaimer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit distinctio id corrupti neque
+      <!-- disclaimer text -->
+      <div>
+        <p class="contact__disclaimer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit
+          distinctio id corrupti neque
           sequi ad, sit delectus. At rerum adipisci accusantium quis quia sunt, animi soluta! Obcaecati, fugiat
           perferendis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit distinctio id
           corrupti
           neque <a href="#">read more</a>.
         </p>
       </div>
+
     </div>
-    <div class="image-frame">
-      <img class="contact-image" src="./dist/css/assets/pexels-los-muertos-crew-8853506.jpg" alt="contact-image">
+    <div class="contact__image-frame">
+      <img class="contact__image" src="./dist/css/assets/pexels-los-muertos-crew-8853506.jpg" alt="contact-image">
     </div>
 
   </section>

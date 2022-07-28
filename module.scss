@@ -2,10 +2,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
+
+ 
 }
 
 h1 {
   font-size: 50px;
+
+  
 }
 
 a {
@@ -15,38 +19,59 @@ a {
 body {
   margin-inline: auto;
   max-width: 1400px;
-  
 }
 
 .header {
   
-  // background-image: url("/dist/css/assets/pexels-kelly-8457868.jpg");
-  // opacity: 0.2;
-  // background-size: cover;
-  // background-repeat: no-repeat;
   border-radius: 0px 0px 30px 30px;
-
   display: flex;
   flex-direction: row;
   position: relative;
-
   height: 60vh;
   width: 100%;
   overflow: hidden;
 
-  .bg-img {
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 35px;
+      // justify-content: center;
+
+    }
+    .header {
+
+      &__quote {
+        width: 100%;
+    
+      }
+      
+      &__btn {
+        margin-left: 0rem;
+        margin-top: 2rem;
+  
+      }
+    }
+
+    &__search-bar {
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+  }
+
+  &__bg-img {
+
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter:brightness(0.7)
-
+    filter:brightness(0.6)
   }
 
-  .top-bar {
+  &__top-bar {
+
     display: flex;
-    // flex-direction: row;
     position: absolute;
     width: 100%;
     justify-content: space-between;
@@ -55,19 +80,16 @@ body {
     color: orange;
   }
 
- 
+  &__quote {
 
-  .header-quote {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
     margin: 5rem;
     width: 50%;
-    z-index: 1;
   }
 
-  .q-text {
+  &__text {
     display: flex;
     position: relative;
     align-items: center;
@@ -75,14 +97,17 @@ body {
     padding-bottom: 2rem;
   }
 
-  .input {
+  
+  &__input {
     border: none;
     border-radius: 5px;
     min-width: 20rem;
     height: 2.5rem;
+    outline: none;
+
   }
   
-  .btn {
+  &__btn {
     font-weight: bold;
     font-size: inherit;
     color: white;
@@ -91,15 +116,15 @@ body {
     padding: 10px 20px;
     background-color: orange;
     margin-left: 1rem;
-  }
 
-  .btn:hover {
-    background-color: orangered;
-    cursor: pointer;
+    &:hover {
+      background-color: orangered;
+      cursor: pointer;
+    }
+    
   }
 
 } 
-
 
 .contact {
 
@@ -108,29 +133,31 @@ body {
   margin-top: 2rem;
   padding-top: 3rem;
   height: 100vh;
-
-  // border: 2px solid black;
   justify-content: space-between;
 
-  .contact-text {
+  &__text {
+
     width: 60%;
-    // height: auto;
     margin-left: 2rem;
     padding: 3rem 5rem;
-
-    p {
-      font-size: 11px;
-      color: gray;
-      padding-bottom: 2rem;
-    }
-
-    .subtitle {
-      padding: 1.5rem 0rem;
-      color: gray;
-    }
   }
 
-  .image-frame {
+  &__subtitle {
+
+    padding: 1.5rem 0rem;
+    color: gray;
+  }
+
+
+  &__disclaimer {
+    font-size: 11px;
+    color: gray;
+    padding-bottom: 2rem;
+    padding: 2rem 0rem;
+    // display: flex;
+  }
+
+  &__image-frame {
     border: 2px solid orange;
     display: flex;
     border-radius: 50%;
@@ -138,53 +165,44 @@ body {
     height: 500px;
     // transform: rotate(-45deg);
     overflow: hidden;
-  
-
-    .contact-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      // transform: rotate(45deg);
-    }
   }
 
-  .btn1, .btn2 {
-    font-weight: bold;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // transform: rotate(45deg);
+  }
 
+  &__btn-switch {
+    padding: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  &__btn1 {
+    font-weight: bold;
     font-size: inherit;
     color: orange;
     border: 1px solid orange;
     border-radius: 5px;
     padding: 10px 20px;
     background-color: white;
-    margin-left: 1rem;
+    // margin-left: 1rem;
+
+    &:focus {
+      font-size: inherit;
+      outline: 0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      background-color: orange;
+    }
   }
 
-  
-  .btn1:focus, .btn2:focus {
-    font-size: inherit;
-    outline: 0;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    background-color: orange;
-    margin-left: 1rem;
+  &__business {
 
-  }
-
-  .btn-switch {
-    padding: 2rem 0rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .btn1 {
-    margin-right: 0px;
-    // padding-right: 0px;
-  }
-
-  .business {
     display: block;
     height: 0;
     overflow: hidden;
@@ -204,16 +222,17 @@ body {
       border: 1px solid rgb(227, 226, 226);
       border-radius: 5px;
     }
-    
-  }
 
-  .business.show {
-    height: auto;
+    &.show {
+      height: auto;
+    }
+    
   }
 
   .form {
     // border: 2px solid black;
-    padding-top: 2rem;
+    // margin-top: 2rem;
+    padding-top: 1rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(auto,50%));
     // grid-template-rows: auto auto 1fr auto;
@@ -286,14 +305,7 @@ body {
     //   padding: ;
       padding: 1rem 0rem .5rem 0rem;
     }
-  }
-    
-  .disclaimer {
-    padding: 2rem 0rem;
-    display: flex;
-  }
-  
-  
+  }  
 }
 
 
