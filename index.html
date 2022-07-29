@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
   <title>Document</title>
   <script src="script.js" defer></script>
 
@@ -13,35 +16,28 @@
 
 <body>
 
-  <section class="header">
+  <header class="header">
 
-    <!-- header bg image -->
-    <img class="header__bg-img" src="/dist/css/assets/pexels-kelly-8457868.jpg" alt="bg image">
-
-    <!-- top bar with logo and phone number -->
-    <div class="header__top-bar">
-
-      <div class="top-bar__logo">
-        <h4>COMPANY LOGO</h4>
-      </div>
-      <div class="top-bar__phone-number">
-        <h4>011111 1112 00</h4>
-      </div>
-
+    <div class="header__logo">
+      <h3>company logo</h3>
     </div>
 
-    <!-- header text -->
-    <div class="header__quote">
+    <div class="header__phone-number">
+      <h3>011 111 222</h3>
+    </div>
 
-      <div class="header__text">
-        <h1>Find out how much you can save with a FV system on your roof</h1>
-      </div>
+  </header>
 
-      <div class="header__search-bar">
-        <input class="header__input" type="text" placeholder="input your address">
-        <button class="header__btn">Simulate</button>
-      </div>
 
+  <section class="welcome">
+
+    <div class="welcome__textarea">
+      <h1>Find out how much you can save with your roof</h1>
+    </div>
+
+    <div class="welcome__search-bar">
+      <input class="header__input" type="text" placeholder="input your address">
+      <button>Simulate</button>
     </div>
 
   </section>
@@ -49,157 +45,239 @@
   <section class="contact">
 
     <div class="contact__text">
+      <div class="contact__text__header">
+        <h2>Or add your contact information and we will call</h2>
+        <h4>Select the option that suits you better and we will call you</h4>
+      </div>
 
-      <h1>Or leave your contact and we will call you</h1>
-      <h3 class="contact__subtitle">Select the best option and we will call you</h3>
+      <div class="contact__text__buttons">
 
+        <input name="my-button" type="radio" value="1" id="my-button-1"
+          class="contact__text__buttons__expand-button__private" checked>
+        <label class="lbl1" for="my-button-1">Private</label>
 
-      <!-- hidden business input holder -->
-      <div class="show-card">
-
-        <div class="contact__btn-switch">
-          <button class="contact__btn1 expand-button1" autofocus>Singular</button>
-          <button class="contact__btn1 expand-button">Business</button>
-        </div>
-
-        <!-- business input -->
-        <div class="contact__business">
-
-          <label for="Business">Business</label>
-          <input name="Business" id="Business" placeholder="Business"></input>
-
-        </div>
+        <input name="my-button" type="radio" value="2" id="my-button-2"
+          class="contact__text__buttons__expand-button__business">
+        <label class="lbl2" for="my-button-2">Business</label>
 
       </div>
 
-      <form class="form">
+      <div class="contact__text__private-form">
 
-        <div class="form-item">
-          <label for="name">Name</label>
-          <input type="text" name="name" , id="name" placeholder="Name">
+        <!-- <form action=""> -->
+
+        <div class="contact__text__private-form__grid-container">
+          <div class="form-item">
+            <label for="name">Name</label>
+            <input type="text" name="name" , id="name" placeholder="Name">
+          </div>
+
+          <div class="form-item">
+
+            <label for="lastname">Last Name</label>
+            <input type="lastname" name="lastname" , id="lastname" placeholder="Last Name">
+          </div>
+
+          <div class="form-item">
+
+            <label for="postalcode">Postal Code</label>
+            <input name="postalcode" id="postalcode" placeholder="Postal Code"></input>
+          </div>
+
+          <div class="form-item">
+
+            <label for="number">Phone number</label>
+            <input name="number" id="number" placeholder="Phone Number"></input>
+          </div>
+
+          <div class="form-item full-width">
+
+            <label for="email">Email</label>
+            <input name="email" id="email" placeholder="Email"></input>
+          </div>
+
         </div>
 
-        <div class="form-item">
+        <!-- <div class="checkbox-item"> -->
+        <!-- <div class="checkbox-item"> -->
 
-          <label for="lastname">Last Name</label>
-          <input type="lastname" name="lastname" , id="lastname" placeholder="Last Name">
+        <span>
+          <input type="checkbox" id="checkbox1">
+          <label for="checkbox1">I have read and accept the <a href="#">terms of service</a>. I accept phone
+            calls
+            will be recorded</label>
+        </span>
+        <!-- </div> -->
+
+        <!-- <div class="checkbox-item"> -->
+        <span>
+          <input type="checkbox" id="checkbox2">
+          <label for="checkbox2">I accept to subscribe for marketing</label>
+        </span>
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+
+        <!-- </div> -->
+
+        <div class="contact__text__private-form__btn-container">
+          <button class="btn">Send</button>
         </div>
 
-        <div class="form-item">
-
-          <label for="postalcode">Postal Code</label>
-          <input name="postalcode" id="postalcode" placeholder="Postal Code"></input>
+        <div>
+          <p class="contact__disclaimer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit
+            distinctio id corrupti neque
+            sequi ad, sit delectus. At rerum adipisci accusantium quis quia sunt, animi soluta! Obcaecati, fugiat
+            perferendis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit distinctio id
+            corrupti
+            neque <a href="#">read more</a>.
+          </p>
         </div>
 
-        <div class="form-item">
+        <!-- </form> -->
+      </div>
 
-          <label for="number">Phone number</label>
-          <input name="number" id="number" placeholder="Phone Number"></input>
+      <div class="contact__text__business-form">
+
+        <!-- <form action=""> -->
+
+        <div class="contact__text__business-form__grid-container">
+          <div class="form-item full-width">
+            <label for="Business">Business</label>
+            <input name="Business" id="Business" placeholder="Business"></input>
+          </div>
+
+          <div class="form-item">
+            <label for="name">Name</label>
+            <input type="text" name="name" , id="name" placeholder="Name">
+          </div>
+
+          <div class="form-item">
+
+            <label for="lastname">Last Name</label>
+            <input type="lastname" name="lastname" , id="lastname" placeholder="Last Name">
+          </div>
+
+          <div class="form-item">
+
+            <label for="postalcode">Postal Code</label>
+            <input name="postalcode" id="postalcode" placeholder="Postal Code"></input>
+          </div>
+
+          <div class="form-item">
+
+            <label for="number">Phone number</label>
+            <input name="number" id="number" placeholder="Phone Number"></input>
+          </div>
+
+          <div class="form-item full-width">
+
+            <label for="email">Email</label>
+            <input name="email" id="email" placeholder="Email"></input>
+          </div>
         </div>
 
-        <div class="form-item full-width">
 
-          <label for="email">Email</label>
-          <input name="email" id="email" placeholder="Email"></input>
-        </div>
+        <!-- <div class="checkbox-list"> -->
+        <span>
 
-      </form>
-
-      <div class="checkbox-list">
-
-        <div class="checkbox-item">
+          <!-- <div class="checkbox-item"> -->
           <input type="checkbox" id="checkbox1">
           <label for="checkbox1">I have read and accept the <a href="#">terms of service</a>. I accept phone calls
             will be recorded</label>
-        </div>
+          <!-- </div> -->
+        </span>
 
-        <div class="checkbox-item">
+        <!-- <div class="checkbox-item"> -->
+        <span>
 
           <input type="checkbox" id="checkbox1">
           <label for="checkbox1">I accept to subscribe for marketing</label>
+        </span>
+        <!-- </div> -->
+
+
+        <!-- </div> -->
+
+        <div class="contact__text__private-form__btn-container">
+          <button class="btn">Send</button>
         </div>
 
-      </div>
+        <div>
+          <p class="contact__disclaimer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit
+            distinctio id corrupti neque
+            sequi ad, sit delectus. At rerum adipisci accusantium quis quia sunt, animi soluta! Obcaecati, fugiat
+            perferendis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit distinctio id
+            corrupti
+            neque <a href="#">read more</a>.
+          </p>
+        </div>
 
-      <div class="btn-container">
-        <button class="btn btn-square" type="submit">Send</button>
-      </div>
+        <!-- </form> -->
 
-      <!-- disclaimer text -->
-      <div>
-        <p class="contact__disclaimer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit
-          distinctio id corrupti neque
-          sequi ad, sit delectus. At rerum adipisci accusantium quis quia sunt, animi soluta! Obcaecati, fugiat
-          perferendis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis suscipit distinctio id
-          corrupti
-          neque <a href="#">read more</a>.
-        </p>
       </div>
 
     </div>
+
     <div class="contact__image-frame">
-      <img class="contact__image" src="./dist/css/assets/pexels-los-muertos-crew-8853506.jpg" alt="contact-image">
+      <img src="./dist/css/assets/pexels-los-muertos-crew-8853506.jpg" alt="contact image">
     </div>
 
   </section>
 
   <section class="grid">
-    <div class="grid-header">
-      <h1 class="grid-top-text">Start saving from day one
-      </h1>
-      <h2>With our company your house is not only more sustainable, it is a way to improve its efficiency</h2>
+    <div class="grid__heading">
+      <h2>Start saving <span>from day one</span></h2>
+      <h4>With our company your house is not only more sustainable, it is a way to improve its efficiency</h4>
     </div>
 
-    <div class="grid-layout">
+    <div class="grid__cards">
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class=" svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis
         </p>
       </div>
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class="svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis</p>
       </div>
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class="svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis</p>
       </div>
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class="svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis</p>
       </div>
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class="svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis</p>
       </div>
 
-      <div class="grid-layout-item">
+      <div class="grid__cards__item">
         <img class="svg" src="/dist/css/assets/electric.svg" alt="" />
         <p>text text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptatum perferendis
           corporis</p>
       </div>
 
     </div>
-
-    <div class="know-more-link">
-      <button class="kml">know more ></button>
-    </div>
-
 
   </section>
 
   <footer>
-    <nav class="nav">
+
+    <nav>
 
       <ul class="nav-list">
         <li><a href="#">Legal</a></li>
@@ -209,6 +287,7 @@
       </ul>
 
     </nav>
+
   </footer>
 
 </body>
